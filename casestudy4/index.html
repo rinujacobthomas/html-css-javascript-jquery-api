@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>home</title>
+  </head>
+  <body>
+    <form action="https://www.google.com/" method="post"><!--action to submit button-->
+      <fieldset>
+        <legend>Your Details</legend><!--title-->
+        Name:
+        <input type="text" name="name"placeholder="Enter Name"><br><!--textbox with placeholder-->
+        Email:
+      <input type="email" name="email" placeholder="Enter Email"><!--textbox with placeholder-->
+    </fieldset><!--end of fieldset-->
+      <br><!--linebreak-->
+      <fieldset><!--next fieldset-->
+        <legend>Your Review</legend><!--title-->
+        <p>How did youhear about us&#63;<!--questionmark-->
+        <select name="site"><!--selectfield-->
+          <option value="Google">Google</option><!--first dropdown-->
+          <option value="Facebook">Facebook</option>
+          <option value="Twitter">Twitter</option>
+          <option value="Newspaper">Newspaper</option>
+        </select>
+       </p>
+         <p>Would you visit again&#63;<!--radio button to select yes or no or maybe-->
+          <input type="radio" name="yesorno" value="yes"> Yes
+          <input type="radio" name="yesorno" value="no"> No
+          <input type="radio" name="yesorno" value="maybe"> Maybe
+        </p>
+        <p>
+          Comments:
+          <br>
+          <textarea name="Comment" rows="5" cols="30" placeholder="Type your comments here"></textarea><!--comment box-->
+        </p>
+        <p>
+          <input type="checkbox" name="checkbox" checked="checked" ><!--checkbox to check signup-->
+          Sign me up for email updates
+          <br>
+          <input type="submit"value="Submit review"><!--submit button-->
+        </p>
+      </fieldset>
+    </form>
+  </body>
+</html>

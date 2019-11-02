@@ -1,0 +1,51 @@
+<html>
+    <head><title>asdf</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script >
+            function addmembers()
+            {
+                var a= document.getElementById("addtext");
+                var b= document.getElementById("lu");
+                var li = document.createElement("li");
+                li.setAttribute('id',a.value);
+                li.appendChild(document.createTextNode(a.value));
+                b.appendChild(li);
+                a.value="";
+                var c=b.children.length;
+                var f=document.getElementById("e");
+                f.value=c;
+            }
+        </script>
+        <style>
+            LI
+            {
+                display: block;
+                background-color: aqua;
+                border: 1px solid black;
+                width: 10em;
+                list-style-type: none;
+                padding: 1em;
+                font-weight: bold;
+                color:darkblue;
+                text-align: center;
+            }
+            #e
+            {
+                width: 1.3em;
+            }
+        </style>
+    </head>
+    <body>
+        
+        <div  style="text-align: center">
+                <center>  <ul class="a" id="lu"></ul></center>
+                <input type="text" id="addtext">
+                <input type="button" id="button" value="Add Members" onclick="addmembers()">
+                 count:    
+                <input type="" id="e" style="border-radius: 10px;border: none;background-color: black;color: white;text-align: center;">
+                    
+                    
+        </div>
+    
+    </body> 
+</html>

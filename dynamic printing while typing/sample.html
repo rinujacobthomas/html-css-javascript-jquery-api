@@ -1,0 +1,51 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>TextNode JS</title>
+    <link rel="stylesheet" href="style.css" type="text/css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    </head>
+    <style>
+    #content
+    {
+        border-radius: 6px;
+        border-color: blueviolet;
+        height: 2em;;
+
+    }
+    #content:hover
+    {
+        border-color: chartreuse;
+    }
+    #div1
+    {
+        color: red;
+    }
+    </style>
+  <body>
+    <center><div class="logDiv">
+        
+        <div><h1> Message :</h1></div>
+        <div></div>
+        <div></div><input type="text" id="content"><br><br></div>
+        <div id="div1"></div>
+    </div></center>
+  <script>
+    //Case Study
+    var inputBox = document.getElementById('content');
+    inputBox.onkeyup = function(){
+    document.getElementById('div1').innerHTML = inputBox.value;
+    }
+   
+    window.addEventListener('load',checkUname)
+    var msg2 = document.getElementById('div1');
+    function checkUname()
+    {
+      var un2 = document.getElementById('content');
+      un2.focus();
+    }
+  </script>
+
+  </body>
+  </html>

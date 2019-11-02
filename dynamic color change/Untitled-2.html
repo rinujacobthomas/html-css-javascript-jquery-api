@@ -1,0 +1,43 @@
+<html>
+    <head><title>asdf</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script >
+       function b()
+       {
+        var letters = ["0","1","2","3","4","5","6","7","8","9","A","B","C","D","E","F"]; 
+  var color = '#'; 
+  for (var i = 0; i < 6; i++) 
+  {
+     color += letters[(Math.floor(Math.random() * 16))]; 
+  }
+     $("#a").css("background-color",color);
+       }
+       var i = 1;                     //  set your counter to 1
+
+function myLoop () {           //  create a loop function
+   setTimeout(function () {    //  call a 3s setTimeout when the loop is called
+      b();         //  your code here
+      i++;                     //  increment the counter
+      if (i < 10) {            //  if the counter < 10, call the loop function
+         myLoop();             //  ..  again which will trigger another 
+      }
+      else
+      {
+          i=1;
+          myLoop();  
+      }                        //  ..  setTimeout()
+   }, 1000)
+}
+       
+
+myLoop();
+        </script>
+        <style>
+       
+        </style>
+    </head>
+    <body>
+        
+        <div id="a" style="width: 10em;height: 10em; border: 1px solid black; background-color: red;"></div>
+    </body> 
+</html>

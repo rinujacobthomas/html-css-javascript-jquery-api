@@ -1,0 +1,69 @@
+<html>
+    <head><title>asdf</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script >
+           function setFocusToTextBox(){
+    document.getElementById("z").focus();
+}
+     function search() {
+    if(event.key === 'Enter') {
+        //alert(ele.value);   
+        var element=document.getElementById("z");
+                var b= document.getElementById("lu");
+                var li = document.createElement("li");
+                li.setAttribute('id',element.value);
+                li.setAttribute('onclick','remove(this.id)');
+                li.appendChild(document.createTextNode(element.value));
+                b.appendChild(li);
+                element.value="";
+    }
+    }
+    function remove(ids) {
+ var list = document.getElementById('lu');
+ var li=document.getElementById(ids);
+ list.removeChild(li);
+}
+
+    
+        </script>
+        <style>
+       ::placeholder
+       {
+           color: black;
+           font-size: 26px;
+           font-weight: bold;
+       }
+       #z
+       {
+           width:auto;
+           height:auto;
+           border: none;
+           color: black;
+           font-size: 26px;
+           font-weight: bold;
+           text-align: center;
+
+       }
+       LI
+        {
+            list-style-type: none;
+            font-weight: bold;
+            text-align: center;
+            font-size: 26px;
+        }
+        LI:hover
+        {
+            text-decoration: line-through;
+        }
+        </style>
+    </head>
+    <body  onload='setFocusToTextBox()'>
+        <center>
+            <input id="z" type="text" placeholder="What needs to be done?" class="search"onkeydown="search()"/>  
+            <ul class="a" id="lu">
+                <li onclick="remove(this.id)"></li>
+            </ul>
+        </center>
+        
+    </body> 
+</html>
